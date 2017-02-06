@@ -11,65 +11,13 @@
 <html>
   <body>
   <%@ include file="header.jsp" %>
-  <%
-    // This is a scriptlet.  Notice that the "date"
-    // variable we declare here is available in the
-    // embedded expression later on.
+  <FORM METHOD=POST ACTION="namesave.jsp">
+    What's your name? <INPUT TYPE=TEXT NAME=username SIZE=20><br/>
+    Degrees <INPUT TYPE=TEXT NAME=degrees SIZE=20> <br/>
+    Radians <INPUT TYPE=TEXT NAME=radians SIZE=20> <br/>
 
-    System.out.println( "Evaluating date now" );
-    Date date = new Date();
-
-    int [][][] students = {{{45,44,90,90},{50,50,50},{55,60}},{{40,41,10,90},{50,50,50},{55,60}}};
-    String output="";
-    out.println("rows:" + students.length +"<br/>");
-    out.println("cols:" + students[0].length+"<br/>");
-    out.println("depth:" + students[0][0].length+"<br/>");
-
-    for(int row=0; row<students.length; row++) {
-      for(int col=0; col<students[row].length; col++) {
-        for(int depth=0; depth<students[row][col].length; depth++) {
-          output+=students[row][col][depth] + ",";
-        }
-        output+="<br/>";
-      }
-      output+="<br/>";
-    }
-  %>
-  Today is <%= date %><br/>
-
-  Display<br/> <%= output%>
-
-  <%
-    // This scriptlet generates HTML output
-    out.println( String.valueOf( date ));
-    out.println(output);
-    out.println( "<BR>Your machine's address is " );
-    out.println( request.getRemoteHost());
-  %>
-  <TABLE BORDER=2>
-    <%
-      for ( int i = 0; i < 10; i++ ) {
-    %>
-    <TR>
-      <TD>Number</TD>
-      <TD><%= i+1 %></TD>
-    </TR>
-    <%
-      }
-    %>
-  </TABLE>
-
-  <%
-    if ( false ) {
-  %>
-  <P>Hello, world
-      <%
-    } else {
-        %>
-  <P>Goodbye, world<br/>
-      <%
-    }
-%>
+    <P><INPUT TYPE=SUBMIT>
+  </FORM>
     <jsp:include page="footer.jsp"/>
   </body>
 </html>
