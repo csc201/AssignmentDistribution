@@ -11,8 +11,8 @@
     <title>Title</title>
 </head>
 <body>
-    <form method="post" action="savename.jsp">
-        Student ID<input type="number" name="studentID"/><br/>
+    <form method="post" action="beansavename.jsp">
+        Student ID<input type="number" name="id"/><br/>
         First Name<input type="text" name="firstName"/><br/>
         Last Name<input type="text" name="lastName"/><br/>
         <input type="submit"/>

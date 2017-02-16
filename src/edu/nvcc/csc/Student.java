@@ -12,7 +12,7 @@ public class Student {
     int size = 21;
 
     public Student() {
-        id = 000;
+        id = 1234;
         firstName = "John";
         lastName = "Doe";
         scores = new double[size];
